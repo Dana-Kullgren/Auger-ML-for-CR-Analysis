@@ -9,8 +9,6 @@ Training_2D_1D_Networks.ipynb - Jupyter notebook used to train both the classifi
 <br>
 
 Note: you will need to create directories to save models, loss/accuracy data, and plots. All network scripts follow the same naming convention for saving files. An example is below. <br>
-`
-ModelsDir = ABS_PATH_HERE + f"/data/models/Denoiser_MSE_Updated_{dataset}"
-LossAccDir = ABS_PATH_HERE + f"/data/loss_and_accuracy/Denoiser_MSE_Updated_{dataset}"
-PlotsDir = ABS_PATH_HERE + f"/plots/Denoiser_MSE_Updated_{dataset}_Plots"
-`
+`ModelsDir = ABS_PATH_HERE + f"/data/models/Denoiser_MSE_Updated_{dataset}"` <br>
+`LossAccDir = ABS_PATH_HERE + f"/data/loss_and_accuracy/Denoiser_MSE_Updated_{dataset}"` <br>
+`PlotsDir = ABS_PATH_HERE + f"/plots/Denoiser_MSE_Updated_{dataset}_Plots"` <br>
