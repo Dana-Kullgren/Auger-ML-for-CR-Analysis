@@ -1,0 +1,9 @@
+*gz
+__pycache__/
+*.npy
+testing/
+Jupyter-Notebooks/
+.ipynb_checkpoints/
+*.ipynb
+*.pdf
+*.png
