@@ -1,0 +1,21 @@
+#You will have to replace some of the values with the the locations that are relevant
+#for your machine
+#Submit a job using this script by running the following from the npx node
+#condor_submit NPXSubmissionTemplate.sub
+
+Executable = /home/dkullgren/work/WaveformML-DataOnly/data-production/taxi-noise/MakeTracesAuger.sh
+
+# Dana's
+Error =  /home/dkullgren/work/my_scripts/data/Output_Error_Files/MyMultiErrorOutput_$(Process).err
+Output =  /home/dkullgren/work/my_scripts/data/Output_Error_Files/MyMultiStandardOutput_$(Process).out
+Log = /scratch/dkullgren/npxmultioutput_$(Process).log
+
+#request_memory = 50GB
+request_memory = 35GB
+
+request_cpus = 1
+
+Arguments= $(Process)
+
+#we are submitting 10 jobs (will replace $(Process) with the current job number)
+Queue 10
