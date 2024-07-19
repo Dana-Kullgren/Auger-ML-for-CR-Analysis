@@ -1,0 +1,22 @@
+executable = /home/dkullgren/work/WaveformML/training/denoiser/Denoiser.sh
+# you should have a scratch directory, if not, create one.
+log = /scratch/dkullgren/Denoiser/DenoiserJob12.log
+output = /scratch/dkullgren/Denoiser/DenoiserJob12.out
+error = /scratch/dkullgren/Denoiser/DenoiserJob12.err
+# settings
+universe = vanilla
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT
+notification = Error
+#notify_user = user@udel.edu
+#requirements = (OpSysMajorVer =?= 6)
+request_memory = 40 GB
+request_disk = 5 GB
+request_cpus = 1
+request_gpus = 1
+requirements = CUDACapability
+getenv = True
+# Change the following arguments based on the model you want to run
+# This is updated with Abdul's best arguments
+arguments = --fil 6 --ks 140 --layers 3
+queue 1
