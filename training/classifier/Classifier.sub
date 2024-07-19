@@ -1,0 +1,22 @@
+executable = /home/dkullgren/work/WaveformML/training/classifier/Classifer.sh
+# you should have a scratch directory, if not, create one.
+log = /scratch/dkullgren/Classifier/ClassifierJob$(1).log
+output = /scratch/dkullgren/Classifier/ClassifierJob$(1).out
+error = /scratch/dkullgren/Classifier/ClassifierJob$(1).err
+# settings
+universe = vanilla
+should_transfer_files = Yes
+when_to_transfer_output = ON_EXIT
+notification = Error
+#notify_user = user@udel.edu
+#requirements = (OpSysMajorVer =?= 6)
+request_memory = 20 GB
+request_disk = 5 GB
+request_cpus = 1
+request_gpus = 1
+requirements = CUDACapability
+getenv = True
+# The arguments now match those of Abdul's best model
+arguments = --fil 12 --ks 160 --dl 1 --layers 2
+queue 1
+.
